@@ -26,7 +26,7 @@ var formTabName = 'Form';
 var tableTabName = 'Table';
 var drawTabName = 'Draw';
 var viewTabName = 'View';
-var helpTabName = 'Help';
+// var helpTabName = 'Help';
 
 L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 
@@ -101,12 +101,12 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 				'name': viewTabName,
 				'accessibility': { focusBack: true, combination: 'W', de: 'F' }
 			},
-			{
-				'text': _('Help'),
-				'id': helpTabName + '-tab-label',
-				'name': helpTabName,
-				'accessibility': { focusBack: true, combination: 'Y', de: 'E' }
-			}
+			// {
+			// 	'text': _('Help'),
+			// 	'id': helpTabName + '-tab-label',
+			// 	'name': helpTabName,
+			// 	'accessibility': { focusBack: true, combination: 'Y', de: 'E' }
+			// }
 		];
 	},
 
@@ -124,7 +124,7 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 				this.getTableTab(),
 				this.getDrawTab(),
 				this.getViewTab(),
-				this.getHelpTab()
+				// this.getHelpTab()
 			 ], selectedId);
 
 		return t;
@@ -316,133 +316,133 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 		return this.getTabPage(fileTabName, content);
 	},
 
-	getHelpTab: function() {
-		var hasLatestUpdates = window.enableWelcomeMessage;
-		var hasFeedback = this._map.feedback;
-		var hasAccessibilitySupport = window.enableAccessibility;
-		var hasAccessibilityCheck = this._map.getDocType() === 'text';
-		var hasAbout = L.DomUtil.get('about-dialog') !== null;
-		var hasServerAudit = !!this._map.serverAuditDialog;
+	// getHelpTab: function() {
+	// 	var hasLatestUpdates = window.enableWelcomeMessage;
+	// 	var hasFeedback = this._map.feedback;
+	// 	var hasAccessibilitySupport = window.enableAccessibility;
+	// 	var hasAccessibilityCheck = this._map.getDocType() === 'text';
+	// 	var hasAbout = L.DomUtil.get('about-dialog') !== null;
+	// 	var hasServerAudit = !!this._map.serverAuditDialog;
 
-		var content = [
-			{
-				'type': 'container',
-				'id': helpTabName + '-container',
-				'children': [
-					{
-						'type': 'toolbox',
-						'children': [
-							{
-								'id': 'forum',
-								'type': 'bigtoolitem',
-								'text': _('Forum'),
-								'command': '.uno:ForumHelp',
-								'accessibility': { focusBack: true, combination: 'C', de: null }
-							}
-						]
-					},
-					{
-						'type': 'toolbox',
-						'children': [
-							{
-								'id': 'online-help',
-								'type': 'bigtoolitem',
-								'text': _('Online Help'),
-								'command': '.uno:OnlineHelp',
-								'accessibility': { focusBack: false, combination: 'H', de: null }
-							}
-						]
-					},
-					{
-						'type': 'toolbox',
-						'children': [
-							{
-								'id': 'keyboard-shortcuts',
-								'type': 'bigtoolitem',
-								'text': _('Keyboard shortcuts'),
-								'command': '.uno:KeyboardShortcuts',
-								'accessibility': { focusBack: false, combination: 'S', de: null }
-							}
-						]
-					},
-					hasAccessibilitySupport ?
-						{
-							'id':'togglea11ystate',
-							'type': 'bigmenubartoolitem',
-							'text': _('Screen Reading')
-						} : {},
-					hasAccessibilityCheck ?
-						{
-							'id': 'accessibility-check',
-							'class': 'unoAccessibilityCheck',
-							'type': 'bigtoolitem',
-							'text': _UNO('.uno:SidebarDeck.A11yCheckDeck', 'text'),
-							'command': '.uno:SidebarDeck.A11yCheckDeck',
-							'accessibility': { focusBack: false, combination: 'A', de: null }
-						} : {},
-					hasServerAudit ?
-						{
-							'id': 'server-audit',
-							'type': 'bigcustomtoolitem',
-							'text': _('Server audit'),
-							'command': 'serveraudit',
-							'accessibility': { focusBack: false, combination: 'SA', de: null }
-						} : {},
-					{
-						'type': 'toolbox',
-						'children': [
-							{
-								'id': 'report-an-issue',
-								'type': 'bigtoolitem',
-								'text': _('Report an issue'),
-								'command': '.uno:ReportIssue',
-								'accessibility': { focusBack: true, combination: 'K', de: null }
-							}
-						]
-					},
-					hasLatestUpdates ?
-						{
-							'type': 'toolbox',
-							'children': [
-								{
-									'id': 'latestupdates',
-									'type': 'bigtoolitem',
-									'text': _('Latest Updates'),
-									'command': '.uno:LatestUpdates'
-								}
-							]
-						} : {},
-					hasFeedback ?
-						{
-							'type': 'toolbox',
-							'children': [
-								{
-									'id': 'feedback',
-									'type': 'bigtoolitem',
-									'text': _('Send Feedback'),
-									'command': '.uno:Feedback'
-								}
-							]
-						} : {},
-					hasAbout ?
-						{
-							'type': 'toolbox',
-							'children': [
-								{
-									'id': 'about',
-									'type': 'bigtoolitem',
-									'text': _('About'),
-									'command': '.uno:About',
-									'accessibility': { focusBack: false, combination: 'W', de: null }
-								}
-							]
-						} : {}
-				]
-			}
-		];
+	// 	var content = [
+	// 		{
+	// 			'type': 'container',
+	// 			'id': helpTabName + '-container',
+	// 			'children': [
+	// 				{
+	// 					'type': 'toolbox',
+	// 					'children': [
+	// 						{
+	// 							'id': 'forum',
+	// 							'type': 'bigtoolitem',
+	// 							'text': _('Forum'),
+	// 							'command': '.uno:ForumHelp',
+	// 							'accessibility': { focusBack: true, combination: 'C', de: null }
+	// 						}
+	// 					]
+	// 				},
+	// 				{
+	// 					'type': 'toolbox',
+	// 					'children': [
+	// 						{
+	// 							'id': 'online-help',
+	// 							'type': 'bigtoolitem',
+	// 							'text': _('Online Help'),
+	// 							'command': '.uno:OnlineHelp',
+	// 							'accessibility': { focusBack: false, combination: 'H', de: null }
+	// 						}
+	// 					]
+	// 				},
+	// 				{
+	// 					'type': 'toolbox',
+	// 					'children': [
+	// 						{
+	// 							'id': 'keyboard-shortcuts',
+	// 							'type': 'bigtoolitem',
+	// 							'text': _('Keyboard shortcuts'),
+	// 							'command': '.uno:KeyboardShortcuts',
+	// 							'accessibility': { focusBack: false, combination: 'S', de: null }
+	// 						}
+	// 					]
+	// 				},
+	// 				hasAccessibilitySupport ?
+	// 					{
+	// 						'id':'togglea11ystate',
+	// 						'type': 'bigmenubartoolitem',
+	// 						'text': _('Screen Reading')
+	// 					} : {},
+	// 				hasAccessibilityCheck ?
+	// 					{
+	// 						'id': 'accessibility-check',
+	// 						'class': 'unoAccessibilityCheck',
+	// 						'type': 'bigtoolitem',
+	// 						'text': _UNO('.uno:SidebarDeck.A11yCheckDeck', 'text'),
+	// 						'command': '.uno:SidebarDeck.A11yCheckDeck',
+	// 						'accessibility': { focusBack: false, combination: 'A', de: null }
+	// 					} : {},
+	// 				hasServerAudit ?
+	// 					{
+	// 						'id': 'server-audit',
+	// 						'type': 'bigcustomtoolitem',
+	// 						'text': _('Server audit'),
+	// 						'command': 'serveraudit',
+	// 						'accessibility': { focusBack: false, combination: 'SA', de: null }
+	// 					} : {},
+	// 				{
+	// 					'type': 'toolbox',
+	// 					'children': [
+	// 						{
+	// 							'id': 'report-an-issue',
+	// 							'type': 'bigtoolitem',
+	// 							'text': _('Report an issue'),
+	// 							'command': '.uno:ReportIssue',
+	// 							'accessibility': { focusBack: true, combination: 'K', de: null }
+	// 						}
+	// 					]
+	// 				},
+	// 				hasLatestUpdates ?
+	// 					{
+	// 						'type': 'toolbox',
+	// 						'children': [
+	// 							{
+	// 								'id': 'latestupdates',
+	// 								'type': 'bigtoolitem',
+	// 								'text': _('Latest Updates'),
+	// 								'command': '.uno:LatestUpdates'
+	// 							}
+	// 						]
+	// 					} : {},
+	// 				hasFeedback ?
+	// 					{
+	// 						'type': 'toolbox',
+	// 						'children': [
+	// 							{
+	// 								'id': 'feedback',
+	// 								'type': 'bigtoolitem',
+	// 								'text': _('Send Feedback'),
+	// 								'command': '.uno:Feedback'
+	// 							}
+	// 						]
+	// 					} : {},
+	// 				hasAbout ?
+	// 					{
+	// 						'type': 'toolbox',
+	// 						'children': [
+	// 							{
+	// 								'id': 'about',
+	// 								'type': 'bigtoolitem',
+	// 								'text': _('About'),
+	// 								'command': '.uno:About',
+	// 								'accessibility': { focusBack: false, combination: 'W', de: null }
+	// 							}
+	// 						]
+	// 					} : {}
+	// 			]
+	// 		}
+	// 	];
 
-		return this.getTabPage(helpTabName, content);
-	},
+	// 	return this.getTabPage(helpTabName, content);
+	// },
 
 	getHomeTab: function() {
 		var content = [

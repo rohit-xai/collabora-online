@@ -61,7 +61,8 @@ button.ui-tab.notebookbar {
 	height: 100%;
 	background: transparent;
 	align-items: center;
-	display: flex;
+	/* display: flex; */
+	display: none;
 }
 
 /* grid */

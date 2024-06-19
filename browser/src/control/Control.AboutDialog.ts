@@ -50,7 +50,7 @@ class AboutDialog {
 			productName =
 				typeof brandProductName !== 'undefined'
 					? brandProductName
-					: 'Collabora Online Development Edition (unbranded)';
+					: 'AlgoReports Editor';
 		}
 		var productURL =
 			typeof brandProductURL !== 'undefined'

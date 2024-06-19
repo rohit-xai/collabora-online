@@ -62,7 +62,7 @@ app.definitions.Socket = L.Class.extend({
 			try {
 				this.socket = window.createWebSocket(this.getWebSocketBaseURI(map));
 			} catch (e) {
-				this._map.fire('error', {msg: _('Oops, there is a problem connecting to %productName: ').replace('%productName', (typeof brandProductName !== 'undefined' ? brandProductName : 'Collabora Online Development Edition (unbranded)')) + e, cmd: 'socket', kind: 'failed', id: 3});
+				this._map.fire('error', {msg: _('Oops, there is a problem connecting to %productName: ').replace('%productName', (typeof brandProductName !== 'undefined' ? brandProductName : 'AlgoReports Editor')) + e, cmd: 'socket', kind: 'failed', id: 3});
 				return;
 			}
 		}
@@ -654,7 +654,7 @@ app.definitions.Socket = L.Class.extend({
 			if (window.indirectSocket) {
 				if (window.expectedServerId && window.expectedServerId != this.WSDServer.Id) {
 					if (this.IndirectSocketReconnectCount++ >= 3) {
-						var msg = errorMessages.clusterconfiguration.replace('%productName', (typeof brandProductName !== 'undefined' ? brandProductName : 'Collabora Online Development Edition (unbranded)'));
+						var msg = errorMessages.clusterconfiguration.replace('%productName', (typeof brandProductName !== 'undefined' ? brandProductName : 'AlgoReports Editor'));
 						msg = msg.replace(/%0/g, window.expectedServerId);
 						msg = msg.replace(/%1/g, window.routeToken);
 						msg = msg.replace(/%2/g, this.WSDServer.Id);
@@ -1138,7 +1138,7 @@ app.definitions.Socket = L.Class.extend({
 				textMsg = textMsg.replace(/{docs}/g, command.params[0]);
 				textMsg = textMsg.replace(/{connections}/g, command.params[1]);
 				textMsg = textMsg.replace(/{productname}/g, (typeof brandProductName !== 'undefined' ?
-					brandProductName : 'Collabora Online Development Edition (unbranded)'));
+					brandProductName : 'AlgoReports Editor'));
 				this._map.fire('infobar',
 					{
 						msg: textMsg,
