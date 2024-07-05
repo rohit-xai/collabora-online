@@ -374,16 +374,16 @@ L.Control.Menubar = L.Control.extend({
 				{type: 'separator'},
 				{name: _UNO('.uno:RunMacro'), id: 'runmacro', uno: '.uno:RunMacro'}
 			]},
-			{name: _UNO('.uno:HelpMenu', 'text'), id: 'help', type: 'menu', menu: [
-				{name: _('Forum'), id: 'forum', type: 'action'},
-				{name: _('Online Help'), id: 'online-help', type: 'action', iosapp: false},
-				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false},
-				{name: _('Report an issue'), id: 'report-an-issue', type: 'action', iosapp: false},
-				{name: _('Latest Updates'), id: 'latestupdates', type: 'action', iosapp: false},
-				{name: _('Send Feedback'), id: 'feedback', type: 'action', mobileapp: false},
-				{name: _('Server audit'), id: 'serveraudit', type: 'action', mobileapp: false},
-				{name: _('About'), id: 'about', type: 'action'}]
-			},
+			// {name: _UNO('.uno:HelpMenu', 'text'), id: 'help', type: 'menu', menu: [
+			// 	{name: _('Forum'), id: 'forum', type: 'action'},
+			// 	{name: _('Online Help'), id: 'online-help', type: 'action', iosapp: false},
+			// 	{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false},
+			// 	{name: _('Report an issue'), id: 'report-an-issue', type: 'action', iosapp: false},
+			// 	{name: _('Latest Updates'), id: 'latestupdates', type: 'action', iosapp: false},
+			// 	{name: _('Send Feedback'), id: 'feedback', type: 'action', mobileapp: false},
+			// 	{name: _('Server audit'), id: 'serveraudit', type: 'action', mobileapp: false},
+			// 	{name: _('About'), id: 'about', type: 'action'}]
+			// },
 			{name: _('Last modification'), id: 'last-mod', type: 'action', tablet: false}
 		],
 
@@ -947,15 +947,15 @@ L.Control.Menubar = L.Control.extend({
 				{type: 'separator'},
 				{name: _UNO('.uno:RunMacro'), id: 'runmacro', uno: '.uno:RunMacro'}
 			]},
-			{name: _UNO('.uno:HelpMenu', 'spreadsheet'), id: 'help', type: 'menu', menu: [
-				{name: _('Online Help'), id: 'online-help', type: 'action', iosapp: false},
-				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false},
-				{name: _('Report an issue'), id: 'report-an-issue', type: 'action', iosapp: false},
-				{name: _('Latest Updates'), id: 'latestupdates', type: 'action', iosapp: false},
-				{name: _('Send Feedback'), id: 'feedback', type: 'action', mobileapp: false},
-				{name: _('Server audit'), id: 'serveraudit', type: 'action', mobileapp: false},
-				{name: _('About'), id: 'about', type: 'action'}]
-			},
+			// {name: _UNO('.uno:HelpMenu', 'spreadsheet'), id: 'help', type: 'menu', menu: [
+			// 	{name: _('Online Help'), id: 'online-help', type: 'action', iosapp: false},
+			// 	{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false},
+			// 	{name: _('Report an issue'), id: 'report-an-issue', type: 'action', iosapp: false},
+			// 	{name: _('Latest Updates'), id: 'latestupdates', type: 'action', iosapp: false},
+			// 	{name: _('Send Feedback'), id: 'feedback', type: 'action', mobileapp: false},
+			// 	{name: _('Server audit'), id: 'serveraudit', type: 'action', mobileapp: false},
+			// 	{name: _('About'), id: 'about', type: 'action'}]
+			// },
 			{name: _('Last modification'), id: 'last-mod', type: 'action', tablet: false}
 		],
 

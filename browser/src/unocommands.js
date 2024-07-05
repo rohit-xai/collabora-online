@@ -220,7 +220,7 @@ var unoCommandsArray = {
 	'GroupSparklines':{spreadsheet:{menu:_('Group Sparklines'),},},
 	'Grow':{global:{context:_('Increase Font Size'),menu:_('Increase Size'),},},
 	'HeaderAndFooter':{presentation:{menu:_('~Header and Footer...'),},},
-	'HelpMenu':{global:{menu:_('~Help'),},},
+	// 'HelpMenu':{global:{menu:_('~Help'),},},
 	'Hide':{spreadsheet:{menu:_('~Hide Sheet'),},},
 	'HideColumn':{spreadsheet:{context:_('H~ide Columns'),menu:_('~Hide'),},},
 	'HideDetail':{global:{menu:_('~Hide Details'),},},
