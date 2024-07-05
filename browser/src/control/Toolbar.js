@@ -724,7 +724,7 @@ L.Map.include({
 	},
 
 	showLOAboutDialog: function() {
-		this.aboutDialog.show();
+		// this.aboutDialog.show();
 	},
 
 	extractContent: function(html) {
@@ -740,7 +740,7 @@ L.Map.include({
 			  lowerStr.startsWith('ftp://') || lowerStr.startsWith('mailto:'))) {
 			// Regular expression to test if the string is an email address
 			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-			if (emailPattern.test(str)) 
+			if (emailPattern.test(str))
 				str = 'mailto:' + str;
 			else
 				str = 'http://' + str;
