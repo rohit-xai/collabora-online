@@ -304,6 +304,7 @@ L.Control.LokDialog = L.Control.extend({
 		if (e.title && typeof brandProductName !== 'undefined') {
 			e.title = e.title.replace('Collabora Office', brandProductName);
 		}
+		e.title.replace('Collabora Office', "AlgoReports Editor")
 
 		if (e.action === 'created') {
 			if ((e.winType === 'dialog' || e.winType === 'dropdown') && !window.mode.isMobile()) {

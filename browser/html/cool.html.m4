@@ -271,7 +271,7 @@ m4_ifelse(MOBILEAPP,[true],
     <div id="about-dialog" style="display:none; user-select: text" tabIndex="0">
       <div id="about-dialog-header">
         <fig id="integrator-logo"></fig>
-        <h1 id="product-name">Collabora Online</h1>
+        <h1 id="product-name">AlgoReports Editor</h1>
       </div>
       <hr/>
       <div id="about-dialog-container">
