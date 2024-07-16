@@ -285,18 +285,18 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 				]
 			});
 
-		content.push({
-			'type': 'container',
-			'children': [
-				{
-					'id': 'renamedocument',
-					'class': 'unoRenameDocument',
-					'type': 'bigcustomtoolitem',
-					'text': _('Rename'),
-					'accessibility': { focusBack: true,	combination: 'RN' }
-				}
-			]
-		});
+		// content.push({
+		// 	'type': 'container',
+		// 	'children': [
+		// 		{
+		// 			'id': 'renamedocument',
+		// 			'class': 'unoRenameDocument',
+		// 			'type': 'bigcustomtoolitem',
+		// 			'text': _('Rename'),
+		// 			'accessibility': { focusBack: true,	combination: 'RN' }
+		// 		}
+		// 	]
+		// });
 
 		if (window.wasmEnabled) {
 			content.push({

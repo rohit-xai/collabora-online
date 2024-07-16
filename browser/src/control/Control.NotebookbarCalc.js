@@ -244,17 +244,17 @@ L.Control.NotebookbarCalc = L.Control.NotebookbarWriter.extend({
 					}
 				]
 			},
-			{
-				'type': 'container',
-				'children': [
-					{
-						'id': 'renamedocument',
-						'class': 'unoRenameDocument',
-						'type': 'bigcustomtoolitem',
-						'text': _('Rename'),
-					}
-				]
-			}
+			// {
+			// 	'type': 'container',
+			// 	'children': [
+			// 		{
+			// 			'id': 'renamedocument',
+			// 			'class': 'unoRenameDocument',
+			// 			'type': 'bigcustomtoolitem',
+			// 			'text': _('Rename'),
+			// 		}
+			// 	]
+			// }
 		);
 
 		return this.getTabPage('File', content);
